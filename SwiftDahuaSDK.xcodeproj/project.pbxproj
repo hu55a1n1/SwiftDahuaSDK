@@ -45,6 +45,7 @@
 		63DD22671E3A6D24005EB82C /* play.h in Headers */ = {isa = PBXBuildFile; fileRef = 63DD22441E3A6D23005EB82C /* play.h */; };
 		63DD22681E3A6D24005EB82C /* netsdk-objcpp.h in Headers */ = {isa = PBXBuildFile; fileRef = 63DD22451E3A6D23005EB82C /* netsdk-objcpp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63DD22691E3A6D24005EB82C /* netsdk-objcpp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63DD22461E3A6D23005EB82C /* netsdk-objcpp.mm */; };
+		63DD22CD1E3A8120005EB82C /* String+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DD22CC1E3A8120005EB82C /* String+Exts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		63DD22441E3A6D23005EB82C /* play.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = play.h; sourceTree = "<group>"; };
 		63DD22451E3A6D23005EB82C /* netsdk-objcpp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "netsdk-objcpp.h"; sourceTree = "<group>"; };
 		63DD22461E3A6D23005EB82C /* netsdk-objcpp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "netsdk-objcpp.mm"; sourceTree = "<group>"; };
+		63DD22CC1E3A8120005EB82C /* String+Exts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Exts.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 		63DD220B1E3A6CF0005EB82C /* SwiftDahuaSDK */ = {
 			isa = PBXGroup;
 			children = (
+				63DD22CC1E3A8120005EB82C /* String+Exts.swift */,
 				63DD22231E3A6D23005EB82C /* dahua-defs.h */,
 				63DD22241E3A6D23005EB82C /* DahuaClient.swift */,
 				63DD22251E3A6D23005EB82C /* lib */,
@@ -347,6 +350,7 @@
 			files = (
 				63DD22691E3A6D24005EB82C /* netsdk-objcpp.mm in Sources */,
 				63DD22481E3A6D23005EB82C /* DahuaClient.swift in Sources */,
+				63DD22CD1E3A8120005EB82C /* String+Exts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
