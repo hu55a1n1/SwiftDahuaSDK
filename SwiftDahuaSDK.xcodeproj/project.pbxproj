@@ -1,0 +1,579 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		63DD22131E3A6CF0005EB82C /* SwiftDahuaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD22091E3A6CF0005EB82C /* SwiftDahuaSDK.framework */; };
+		63DD22181E3A6CF0005EB82C /* SwiftDahuaSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DD22171E3A6CF0005EB82C /* SwiftDahuaSDKTests.swift */; };
+		63DD221A1E3A6CF0005EB82C /* SwiftDahuaSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 63DD220C1E3A6CF0005EB82C /* SwiftDahuaSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		63DD22471E3A6D23005EB82C /* dahua-defs.h in Headers */ = {isa = PBXBuildFile; fileRef = 63DD22231E3A6D23005EB82C /* dahua-defs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		63DD22481E3A6D23005EB82C /* DahuaClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DD22241E3A6D23005EB82C /* DahuaClient.swift */; };
+		63DD22491E3A6D23005EB82C /* avglobal.h in Headers */ = {isa = PBXBuildFile; fileRef = 63DD22261E3A6D23005EB82C /* avglobal.h */; };
+		63DD224A1E3A6D23005EB82C /* Eng_configsdk.h in Headers */ = {isa = PBXBuildFile; fileRef = 63DD22271E3A6D23005EB82C /* Eng_configsdk.h */; };
+		63DD224B1E3A6D23005EB82C /* Eng_netsdk.h in Headers */ = {isa = PBXBuildFile; fileRef = 63DD22281E3A6D23005EB82C /* Eng_netsdk.h */; };
+		63DD224C1E3A6D23005EB82C /* libaacdec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD22291E3A6D23005EB82C /* libaacdec.a */; };
+		63DD224D1E3A6D23005EB82C /* libadpcmdec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD222A1E3A6D23005EB82C /* libadpcmdec.a */; };
+		63DD224E1E3A6D23005EB82C /* libamrdec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD222B1E3A6D23005EB82C /* libamrdec.a */; };
+		63DD224F1E3A6D23005EB82C /* libconfigsdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD222C1E3A6D23005EB82C /* libconfigsdk.a */; };
+		63DD22501E3A6D23005EB82C /* libdvr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD222D1E3A6D23005EB82C /* libdvr.a */; };
+		63DD22511E3A6D23005EB82C /* libg711.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD222E1E3A6D23005EB82C /* libg711.a */; };
+		63DD22521E3A6D23005EB82C /* libg723dec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD222F1E3A6D23005EB82C /* libg723dec.a */; };
+		63DD22531E3A6D23005EB82C /* libh264dec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD22301E3A6D23005EB82C /* libh264dec.a */; };
+		63DD22541E3A6D23005EB82C /* libh264parser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD22311E3A6D23005EB82C /* libh264parser.a */; };
+		63DD22551E3A6D23005EB82C /* libhevcdec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD22321E3A6D23005EB82C /* libhevcdec.a */; };
+		63DD22561E3A6D23005EB82C /* libhevcparser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD22331E3A6D23005EB82C /* libhevcparser.a */; };
+		63DD22571E3A6D23005EB82C /* libInfra.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD22341E3A6D23005EB82C /* libInfra.a */; };
+		63DD22581E3A6D23005EB82C /* libiosrender.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD22351E3A6D23005EB82C /* libiosrender.a */; };
+		63DD22591E3A6D23005EB82C /* libmjpegdec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD22361E3A6D23005EB82C /* libmjpegdec.a */; };
+		63DD225A1E3A6D23005EB82C /* libmp2dec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD22371E3A6D23005EB82C /* libmp2dec.a */; };
+		63DD225B1E3A6D23005EB82C /* libmp3dec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD22381E3A6D23005EB82C /* libmp3dec.a */; };
+		63DD225C1E3A6D23005EB82C /* libmpeg4dec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD22391E3A6D23005EB82C /* libmpeg4dec.a */; };
+		63DD225D1E3A6D23005EB82C /* libNATTraver.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD223A1E3A6D23005EB82C /* libNATTraver.a */; };
+		63DD225E1E3A6D23005EB82C /* libnetsdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD223B1E3A6D23005EB82C /* libnetsdk.a */; };
+		63DD225F1E3A6D23005EB82C /* liboggdec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD223C1E3A6D23005EB82C /* liboggdec.a */; };
+		63DD22601E3A6D23005EB82C /* libplay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD223D1E3A6D23005EB82C /* libplay.a */; };
+		63DD22611E3A6D23005EB82C /* libpostprocess.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD223E1E3A6D23005EB82C /* libpostprocess.a */; };
+		63DD22621E3A6D23005EB82C /* libStreamPackage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD223F1E3A6D23005EB82C /* libStreamPackage.a */; };
+		63DD22631E3A6D23005EB82C /* libStreamParser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD22401E3A6D23005EB82C /* libStreamParser.a */; };
+		63DD22641E3A6D23005EB82C /* libsvacdec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD22411E3A6D23005EB82C /* libsvacdec.a */; };
+		63DD22651E3A6D23005EB82C /* libTinyXML.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD22421E3A6D23005EB82C /* libTinyXML.a */; };
+		63DD22661E3A6D23005EB82C /* libTouProxy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD22431E3A6D23005EB82C /* libTouProxy.a */; };
+		63DD22671E3A6D24005EB82C /* play.h in Headers */ = {isa = PBXBuildFile; fileRef = 63DD22441E3A6D23005EB82C /* play.h */; };
+		63DD22681E3A6D24005EB82C /* netsdk-objcpp.h in Headers */ = {isa = PBXBuildFile; fileRef = 63DD22451E3A6D23005EB82C /* netsdk-objcpp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		63DD22691E3A6D24005EB82C /* netsdk-objcpp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63DD22461E3A6D23005EB82C /* netsdk-objcpp.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		63DD22141E3A6CF0005EB82C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63DD22001E3A6CF0005EB82C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63DD22081E3A6CF0005EB82C;
+			remoteInfo = SwiftDahuaSDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		63DD22091E3A6CF0005EB82C /* SwiftDahuaSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftDahuaSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63DD220C1E3A6CF0005EB82C /* SwiftDahuaSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftDahuaSDK.h; sourceTree = "<group>"; };
+		63DD220D1E3A6CF0005EB82C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63DD22121E3A6CF0005EB82C /* SwiftDahuaSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftDahuaSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		63DD22171E3A6CF0005EB82C /* SwiftDahuaSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDahuaSDKTests.swift; sourceTree = "<group>"; };
+		63DD22191E3A6CF0005EB82C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63DD22231E3A6D23005EB82C /* dahua-defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "dahua-defs.h"; sourceTree = "<group>"; };
+		63DD22241E3A6D23005EB82C /* DahuaClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DahuaClient.swift; sourceTree = "<group>"; };
+		63DD22261E3A6D23005EB82C /* avglobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avglobal.h; sourceTree = "<group>"; };
+		63DD22271E3A6D23005EB82C /* Eng_configsdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Eng_configsdk.h; sourceTree = "<group>"; };
+		63DD22281E3A6D23005EB82C /* Eng_netsdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Eng_netsdk.h; sourceTree = "<group>"; };
+		63DD22291E3A6D23005EB82C /* libaacdec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libaacdec.a; sourceTree = "<group>"; };
+		63DD222A1E3A6D23005EB82C /* libadpcmdec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libadpcmdec.a; sourceTree = "<group>"; };
+		63DD222B1E3A6D23005EB82C /* libamrdec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libamrdec.a; sourceTree = "<group>"; };
+		63DD222C1E3A6D23005EB82C /* libconfigsdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libconfigsdk.a; sourceTree = "<group>"; };
+		63DD222D1E3A6D23005EB82C /* libdvr.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libdvr.a; sourceTree = "<group>"; };
+		63DD222E1E3A6D23005EB82C /* libg711.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libg711.a; sourceTree = "<group>"; };
+		63DD222F1E3A6D23005EB82C /* libg723dec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libg723dec.a; sourceTree = "<group>"; };
+		63DD22301E3A6D23005EB82C /* libh264dec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libh264dec.a; sourceTree = "<group>"; };
+		63DD22311E3A6D23005EB82C /* libh264parser.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libh264parser.a; sourceTree = "<group>"; };
+		63DD22321E3A6D23005EB82C /* libhevcdec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libhevcdec.a; sourceTree = "<group>"; };
+		63DD22331E3A6D23005EB82C /* libhevcparser.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libhevcparser.a; sourceTree = "<group>"; };
+		63DD22341E3A6D23005EB82C /* libInfra.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libInfra.a; sourceTree = "<group>"; };
+		63DD22351E3A6D23005EB82C /* libiosrender.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libiosrender.a; sourceTree = "<group>"; };
+		63DD22361E3A6D23005EB82C /* libmjpegdec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmjpegdec.a; sourceTree = "<group>"; };
+		63DD22371E3A6D23005EB82C /* libmp2dec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp2dec.a; sourceTree = "<group>"; };
+		63DD22381E3A6D23005EB82C /* libmp3dec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3dec.a; sourceTree = "<group>"; };
+		63DD22391E3A6D23005EB82C /* libmpeg4dec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmpeg4dec.a; sourceTree = "<group>"; };
+		63DD223A1E3A6D23005EB82C /* libNATTraver.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNATTraver.a; sourceTree = "<group>"; };
+		63DD223B1E3A6D23005EB82C /* libnetsdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libnetsdk.a; sourceTree = "<group>"; };
+		63DD223C1E3A6D23005EB82C /* liboggdec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = liboggdec.a; sourceTree = "<group>"; };
+		63DD223D1E3A6D23005EB82C /* libplay.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libplay.a; sourceTree = "<group>"; };
+		63DD223E1E3A6D23005EB82C /* libpostprocess.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libpostprocess.a; sourceTree = "<group>"; };
+		63DD223F1E3A6D23005EB82C /* libStreamPackage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libStreamPackage.a; sourceTree = "<group>"; };
+		63DD22401E3A6D23005EB82C /* libStreamParser.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libStreamParser.a; sourceTree = "<group>"; };
+		63DD22411E3A6D23005EB82C /* libsvacdec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libsvacdec.a; sourceTree = "<group>"; };
+		63DD22421E3A6D23005EB82C /* libTinyXML.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTinyXML.a; sourceTree = "<group>"; };
+		63DD22431E3A6D23005EB82C /* libTouProxy.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTouProxy.a; sourceTree = "<group>"; };
+		63DD22441E3A6D23005EB82C /* play.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = play.h; sourceTree = "<group>"; };
+		63DD22451E3A6D23005EB82C /* netsdk-objcpp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "netsdk-objcpp.h"; sourceTree = "<group>"; };
+		63DD22461E3A6D23005EB82C /* netsdk-objcpp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "netsdk-objcpp.mm"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63DD22051E3A6CF0005EB82C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63DD22631E3A6D23005EB82C /* libStreamParser.a in Frameworks */,
+				63DD224F1E3A6D23005EB82C /* libconfigsdk.a in Frameworks */,
+				63DD22611E3A6D23005EB82C /* libpostprocess.a in Frameworks */,
+				63DD22621E3A6D23005EB82C /* libStreamPackage.a in Frameworks */,
+				63DD225D1E3A6D23005EB82C /* libNATTraver.a in Frameworks */,
+				63DD22581E3A6D23005EB82C /* libiosrender.a in Frameworks */,
+				63DD22501E3A6D23005EB82C /* libdvr.a in Frameworks */,
+				63DD22561E3A6D23005EB82C /* libhevcparser.a in Frameworks */,
+				63DD225E1E3A6D23005EB82C /* libnetsdk.a in Frameworks */,
+				63DD22641E3A6D23005EB82C /* libsvacdec.a in Frameworks */,
+				63DD22541E3A6D23005EB82C /* libh264parser.a in Frameworks */,
+				63DD22571E3A6D23005EB82C /* libInfra.a in Frameworks */,
+				63DD22591E3A6D23005EB82C /* libmjpegdec.a in Frameworks */,
+				63DD22531E3A6D23005EB82C /* libh264dec.a in Frameworks */,
+				63DD225F1E3A6D23005EB82C /* liboggdec.a in Frameworks */,
+				63DD22651E3A6D23005EB82C /* libTinyXML.a in Frameworks */,
+				63DD22601E3A6D23005EB82C /* libplay.a in Frameworks */,
+				63DD22551E3A6D23005EB82C /* libhevcdec.a in Frameworks */,
+				63DD224E1E3A6D23005EB82C /* libamrdec.a in Frameworks */,
+				63DD225C1E3A6D23005EB82C /* libmpeg4dec.a in Frameworks */,
+				63DD225A1E3A6D23005EB82C /* libmp2dec.a in Frameworks */,
+				63DD224D1E3A6D23005EB82C /* libadpcmdec.a in Frameworks */,
+				63DD224C1E3A6D23005EB82C /* libaacdec.a in Frameworks */,
+				63DD225B1E3A6D23005EB82C /* libmp3dec.a in Frameworks */,
+				63DD22511E3A6D23005EB82C /* libg711.a in Frameworks */,
+				63DD22521E3A6D23005EB82C /* libg723dec.a in Frameworks */,
+				63DD22661E3A6D23005EB82C /* libTouProxy.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63DD220F1E3A6CF0005EB82C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63DD22131E3A6CF0005EB82C /* SwiftDahuaSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		63DD21FF1E3A6CF0005EB82C = {
+			isa = PBXGroup;
+			children = (
+				63DD220B1E3A6CF0005EB82C /* SwiftDahuaSDK */,
+				63DD22161E3A6CF0005EB82C /* SwiftDahuaSDKTests */,
+				63DD220A1E3A6CF0005EB82C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		63DD220A1E3A6CF0005EB82C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63DD22091E3A6CF0005EB82C /* SwiftDahuaSDK.framework */,
+				63DD22121E3A6CF0005EB82C /* SwiftDahuaSDKTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63DD220B1E3A6CF0005EB82C /* SwiftDahuaSDK */ = {
+			isa = PBXGroup;
+			children = (
+				63DD22231E3A6D23005EB82C /* dahua-defs.h */,
+				63DD22241E3A6D23005EB82C /* DahuaClient.swift */,
+				63DD22251E3A6D23005EB82C /* lib */,
+				63DD22451E3A6D23005EB82C /* netsdk-objcpp.h */,
+				63DD22461E3A6D23005EB82C /* netsdk-objcpp.mm */,
+				63DD220C1E3A6CF0005EB82C /* SwiftDahuaSDK.h */,
+				63DD220D1E3A6CF0005EB82C /* Info.plist */,
+			);
+			path = SwiftDahuaSDK;
+			sourceTree = "<group>";
+		};
+		63DD22161E3A6CF0005EB82C /* SwiftDahuaSDKTests */ = {
+			isa = PBXGroup;
+			children = (
+				63DD22171E3A6CF0005EB82C /* SwiftDahuaSDKTests.swift */,
+				63DD22191E3A6CF0005EB82C /* Info.plist */,
+			);
+			path = SwiftDahuaSDKTests;
+			sourceTree = "<group>";
+		};
+		63DD22251E3A6D23005EB82C /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				63DD22261E3A6D23005EB82C /* avglobal.h */,
+				63DD22271E3A6D23005EB82C /* Eng_configsdk.h */,
+				63DD22281E3A6D23005EB82C /* Eng_netsdk.h */,
+				63DD22291E3A6D23005EB82C /* libaacdec.a */,
+				63DD222A1E3A6D23005EB82C /* libadpcmdec.a */,
+				63DD222B1E3A6D23005EB82C /* libamrdec.a */,
+				63DD222C1E3A6D23005EB82C /* libconfigsdk.a */,
+				63DD222D1E3A6D23005EB82C /* libdvr.a */,
+				63DD222E1E3A6D23005EB82C /* libg711.a */,
+				63DD222F1E3A6D23005EB82C /* libg723dec.a */,
+				63DD22301E3A6D23005EB82C /* libh264dec.a */,
+				63DD22311E3A6D23005EB82C /* libh264parser.a */,
+				63DD22321E3A6D23005EB82C /* libhevcdec.a */,
+				63DD22331E3A6D23005EB82C /* libhevcparser.a */,
+				63DD22341E3A6D23005EB82C /* libInfra.a */,
+				63DD22351E3A6D23005EB82C /* libiosrender.a */,
+				63DD22361E3A6D23005EB82C /* libmjpegdec.a */,
+				63DD22371E3A6D23005EB82C /* libmp2dec.a */,
+				63DD22381E3A6D23005EB82C /* libmp3dec.a */,
+				63DD22391E3A6D23005EB82C /* libmpeg4dec.a */,
+				63DD223A1E3A6D23005EB82C /* libNATTraver.a */,
+				63DD223B1E3A6D23005EB82C /* libnetsdk.a */,
+				63DD223C1E3A6D23005EB82C /* liboggdec.a */,
+				63DD223D1E3A6D23005EB82C /* libplay.a */,
+				63DD223E1E3A6D23005EB82C /* libpostprocess.a */,
+				63DD223F1E3A6D23005EB82C /* libStreamPackage.a */,
+				63DD22401E3A6D23005EB82C /* libStreamParser.a */,
+				63DD22411E3A6D23005EB82C /* libsvacdec.a */,
+				63DD22421E3A6D23005EB82C /* libTinyXML.a */,
+				63DD22431E3A6D23005EB82C /* libTouProxy.a */,
+				63DD22441E3A6D23005EB82C /* play.h */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		63DD22061E3A6CF0005EB82C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63DD22671E3A6D24005EB82C /* play.h in Headers */,
+				63DD22471E3A6D23005EB82C /* dahua-defs.h in Headers */,
+				63DD22681E3A6D24005EB82C /* netsdk-objcpp.h in Headers */,
+				63DD221A1E3A6CF0005EB82C /* SwiftDahuaSDK.h in Headers */,
+				63DD224A1E3A6D23005EB82C /* Eng_configsdk.h in Headers */,
+				63DD224B1E3A6D23005EB82C /* Eng_netsdk.h in Headers */,
+				63DD22491E3A6D23005EB82C /* avglobal.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		63DD22081E3A6CF0005EB82C /* SwiftDahuaSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63DD221D1E3A6CF0005EB82C /* Build configuration list for PBXNativeTarget "SwiftDahuaSDK" */;
+			buildPhases = (
+				63DD22041E3A6CF0005EB82C /* Sources */,
+				63DD22051E3A6CF0005EB82C /* Frameworks */,
+				63DD22061E3A6CF0005EB82C /* Headers */,
+				63DD22071E3A6CF0005EB82C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftDahuaSDK;
+			productName = SwiftDahuaSDK;
+			productReference = 63DD22091E3A6CF0005EB82C /* SwiftDahuaSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		63DD22111E3A6CF0005EB82C /* SwiftDahuaSDKTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63DD22201E3A6CF0005EB82C /* Build configuration list for PBXNativeTarget "SwiftDahuaSDKTests" */;
+			buildPhases = (
+				63DD220E1E3A6CF0005EB82C /* Sources */,
+				63DD220F1E3A6CF0005EB82C /* Frameworks */,
+				63DD22101E3A6CF0005EB82C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63DD22151E3A6CF0005EB82C /* PBXTargetDependency */,
+			);
+			name = SwiftDahuaSDKTests;
+			productName = SwiftDahuaSDKTests;
+			productReference = 63DD22121E3A6CF0005EB82C /* SwiftDahuaSDKTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		63DD22001E3A6CF0005EB82C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Shoaib Ahmed";
+				TargetAttributes = {
+					63DD22081E3A6CF0005EB82C = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = R93M99E72L;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+					63DD22111E3A6CF0005EB82C = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = R93M99E72L;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 63DD22031E3A6CF0005EB82C /* Build configuration list for PBXProject "SwiftDahuaSDK" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 63DD21FF1E3A6CF0005EB82C;
+			productRefGroup = 63DD220A1E3A6CF0005EB82C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63DD22081E3A6CF0005EB82C /* SwiftDahuaSDK */,
+				63DD22111E3A6CF0005EB82C /* SwiftDahuaSDKTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		63DD22071E3A6CF0005EB82C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63DD22101E3A6CF0005EB82C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63DD22041E3A6CF0005EB82C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63DD22691E3A6D24005EB82C /* netsdk-objcpp.mm in Sources */,
+				63DD22481E3A6D23005EB82C /* DahuaClient.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63DD220E1E3A6CF0005EB82C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63DD22181E3A6CF0005EB82C /* SwiftDahuaSDKTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		63DD22151E3A6CF0005EB82C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 63DD22081E3A6CF0005EB82C /* SwiftDahuaSDK */;
+			targetProxy = 63DD22141E3A6CF0005EB82C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		63DD221B1E3A6CF0005EB82C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		63DD221C1E3A6CF0005EB82C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		63DD221E1E3A6CF0005EB82C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = R93M99E72L;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SwiftDahuaSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SwiftDahuaSDK/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shoaib-ahmed.SwiftDahuaSDK";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		63DD221F1E3A6CF0005EB82C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = R93M99E72L;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SwiftDahuaSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SwiftDahuaSDK/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shoaib-ahmed.SwiftDahuaSDK";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		63DD22211E3A6CF0005EB82C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = R93M99E72L;
+				INFOPLIST_FILE = SwiftDahuaSDKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shoaib-ahmed.SwiftDahuaSDKTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		63DD22221E3A6CF0005EB82C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = R93M99E72L;
+				INFOPLIST_FILE = SwiftDahuaSDKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shoaib-ahmed.SwiftDahuaSDKTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		63DD22031E3A6CF0005EB82C /* Build configuration list for PBXProject "SwiftDahuaSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63DD221B1E3A6CF0005EB82C /* Debug */,
+				63DD221C1E3A6CF0005EB82C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63DD221D1E3A6CF0005EB82C /* Build configuration list for PBXNativeTarget "SwiftDahuaSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63DD221E1E3A6CF0005EB82C /* Debug */,
+				63DD221F1E3A6CF0005EB82C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		63DD22201E3A6CF0005EB82C /* Build configuration list for PBXNativeTarget "SwiftDahuaSDKTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63DD22211E3A6CF0005EB82C /* Debug */,
+				63DD22221E3A6CF0005EB82C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 63DD22001E3A6CF0005EB82C /* Project object */;
+}
