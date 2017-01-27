@@ -10,6 +10,8 @@
 #define netsdk_objcpp_h
 
 #include "dahua-defs.h"
+#include "dahua-p2p-defs.h"
+#include "dahua-play-defs.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -31,8 +33,34 @@ BOOL CALL_METHOD CLIENT_GetDevConfig_(LLONG lLoginID, DWORD dwCommand, LONG lCha
 
 
 // Mark: P2P API
-
+TOU_API ProxyClientHandler DHProxyClientInit_(const char* svrip, int svrport, const char* passwd);
     
+TOU_API void DHProxyClientRelease_(ProxyClientHandler handler);
+    
+TOU_API int DHProxyClientAddPort_(ProxyClientHandler handler,
+                                     const char* deviceId, int targetPort, int *localPort);
+    
+TOU_API int DHProxyClientDelPort_(ProxyClientHandler handler, int port);
+
+
+TOU_API int DHProxyClientQueryRate_(ProxyClientHandler handler,
+                                   int port, DHProxyClientMapPortRate *rate);
+
+TOU_API int DHProxyClientChannelstate_(ProxyClientHandler handler, int port, DHProxyClientP2PChannelState *state);
+
+TOU_API int DHProxyClientState_(ProxyClientHandler handler, DHProxyClientProxyState *state);
+
+TOU_API int DHProxyClientServerState_(ProxyClientHandler handler, const char* deviceId, DHProxyClientProxyState *state);
+
+TOU_API int DHProxyClientQueryRemoetInfo_(ProxyClientHandler handler, int port, DHProxyClientRemotePortInfo *info);
+
+TOU_API ProxyClientHandler DHProxyClientInitWtihName_(const char* svrip, int svrport, const char* passwd, const char* username);
+
+TOU_API	int DHProxySetOption_(ProxyClientHandler handler, DHProxyOption option, int value);
+
+TOU_API int DHProxyGetOption_(ProxyClientHandler handler, DHProxyOption option);
+    
+
 #ifdef __cplusplus
 }
 #endif
