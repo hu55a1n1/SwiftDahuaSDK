@@ -1,5 +1,5 @@
-# Dahua SDK lib files
-SwiftDahuaSDK/lib
+# Dahua SDK files
+SwiftDahuaSDK/lib/*.a
 
 
 # 
