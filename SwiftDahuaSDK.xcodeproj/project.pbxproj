@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6361136E1E3B5B7200F357F0 /* avglobal.h in Headers */ = {isa = PBXBuildFile; fileRef = 636113671E3B5B7200F357F0 /* avglobal.h */; };
+		636113701E3B5B7200F357F0 /* Eng_configsdk.h in Headers */ = {isa = PBXBuildFile; fileRef = 636113691E3B5B7200F357F0 /* Eng_configsdk.h */; };
+		636113711E3B5B7200F357F0 /* Eng_netsdk.h in Headers */ = {isa = PBXBuildFile; fileRef = 6361136A1E3B5B7200F357F0 /* Eng_netsdk.h */; };
+		636113721E3B5B7200F357F0 /* play.h in Headers */ = {isa = PBXBuildFile; fileRef = 6361136B1E3B5B7200F357F0 /* play.h */; };
+		636113741E3B5B7200F357F0 /* ProxyClientCWrap.h in Headers */ = {isa = PBXBuildFile; fileRef = 6361136D1E3B5B7200F357F0 /* ProxyClientCWrap.h */; };
+		636113771E3B891900F357F0 /* dahua-p2p-defs.h in Headers */ = {isa = PBXBuildFile; fileRef = 636113751E3B891900F357F0 /* dahua-p2p-defs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		636113781E3B891900F357F0 /* dahua-play-defs.h in Headers */ = {isa = PBXBuildFile; fileRef = 636113761E3B891900F357F0 /* dahua-play-defs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6361137C1E3B94DE00F357F0 /* _COPY_DAHUA_STATIC_LIBRARY_FILES_HERE in Resources */ = {isa = PBXBuildFile; fileRef = 6361137B1E3B94DE00F357F0 /* _COPY_DAHUA_STATIC_LIBRARY_FILES_HERE */; };
 		63DD22131E3A6CF0005EB82C /* SwiftDahuaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD22091E3A6CF0005EB82C /* SwiftDahuaSDK.framework */; };
 		63DD22181E3A6CF0005EB82C /* SwiftDahuaSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DD22171E3A6CF0005EB82C /* SwiftDahuaSDKTests.swift */; };
 		63DD221A1E3A6CF0005EB82C /* SwiftDahuaSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 63DD220C1E3A6CF0005EB82C /* SwiftDahuaSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63DD22471E3A6D23005EB82C /* dahua-defs.h in Headers */ = {isa = PBXBuildFile; fileRef = 63DD22231E3A6D23005EB82C /* dahua-defs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63DD22481E3A6D23005EB82C /* DahuaClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DD22241E3A6D23005EB82C /* DahuaClient.swift */; };
-		63DD22491E3A6D23005EB82C /* avglobal.h in Headers */ = {isa = PBXBuildFile; fileRef = 63DD22261E3A6D23005EB82C /* avglobal.h */; };
-		63DD224A1E3A6D23005EB82C /* Eng_configsdk.h in Headers */ = {isa = PBXBuildFile; fileRef = 63DD22271E3A6D23005EB82C /* Eng_configsdk.h */; };
-		63DD224B1E3A6D23005EB82C /* Eng_netsdk.h in Headers */ = {isa = PBXBuildFile; fileRef = 63DD22281E3A6D23005EB82C /* Eng_netsdk.h */; };
 		63DD224C1E3A6D23005EB82C /* libaacdec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD22291E3A6D23005EB82C /* libaacdec.a */; };
 		63DD224D1E3A6D23005EB82C /* libadpcmdec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD222A1E3A6D23005EB82C /* libadpcmdec.a */; };
 		63DD224E1E3A6D23005EB82C /* libamrdec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD222B1E3A6D23005EB82C /* libamrdec.a */; };
@@ -42,7 +47,6 @@
 		63DD22641E3A6D23005EB82C /* libsvacdec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD22411E3A6D23005EB82C /* libsvacdec.a */; };
 		63DD22651E3A6D23005EB82C /* libTinyXML.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD22421E3A6D23005EB82C /* libTinyXML.a */; };
 		63DD22661E3A6D23005EB82C /* libTouProxy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD22431E3A6D23005EB82C /* libTouProxy.a */; };
-		63DD22671E3A6D24005EB82C /* play.h in Headers */ = {isa = PBXBuildFile; fileRef = 63DD22441E3A6D23005EB82C /* play.h */; };
 		63DD22681E3A6D24005EB82C /* netsdk-objcpp.h in Headers */ = {isa = PBXBuildFile; fileRef = 63DD22451E3A6D23005EB82C /* netsdk-objcpp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63DD22691E3A6D24005EB82C /* netsdk-objcpp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63DD22461E3A6D23005EB82C /* netsdk-objcpp.mm */; };
 		63DD22CD1E3A8120005EB82C /* String+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DD22CC1E3A8120005EB82C /* String+Exts.swift */; };
@@ -59,6 +63,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		636113671E3B5B7200F357F0 /* avglobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avglobal.h; sourceTree = "<group>"; };
+		636113691E3B5B7200F357F0 /* Eng_configsdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Eng_configsdk.h; sourceTree = "<group>"; };
+		6361136A1E3B5B7200F357F0 /* Eng_netsdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Eng_netsdk.h; sourceTree = "<group>"; };
+		6361136B1E3B5B7200F357F0 /* play.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = play.h; sourceTree = "<group>"; };
+		6361136D1E3B5B7200F357F0 /* ProxyClientCWrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProxyClientCWrap.h; sourceTree = "<group>"; };
+		636113751E3B891900F357F0 /* dahua-p2p-defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "dahua-p2p-defs.h"; sourceTree = "<group>"; };
+		636113761E3B891900F357F0 /* dahua-play-defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "dahua-play-defs.h"; sourceTree = "<group>"; };
+		6361137B1E3B94DE00F357F0 /* _COPY_DAHUA_STATIC_LIBRARY_FILES_HERE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _COPY_DAHUA_STATIC_LIBRARY_FILES_HERE; sourceTree = "<group>"; };
 		63DD22091E3A6CF0005EB82C /* SwiftDahuaSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftDahuaSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63DD220C1E3A6CF0005EB82C /* SwiftDahuaSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftDahuaSDK.h; sourceTree = "<group>"; };
 		63DD220D1E3A6CF0005EB82C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -67,9 +79,6 @@
 		63DD22191E3A6CF0005EB82C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63DD22231E3A6D23005EB82C /* dahua-defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "dahua-defs.h"; sourceTree = "<group>"; };
 		63DD22241E3A6D23005EB82C /* DahuaClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DahuaClient.swift; sourceTree = "<group>"; };
-		63DD22261E3A6D23005EB82C /* avglobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avglobal.h; sourceTree = "<group>"; };
-		63DD22271E3A6D23005EB82C /* Eng_configsdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Eng_configsdk.h; sourceTree = "<group>"; };
-		63DD22281E3A6D23005EB82C /* Eng_netsdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Eng_netsdk.h; sourceTree = "<group>"; };
 		63DD22291E3A6D23005EB82C /* libaacdec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libaacdec.a; sourceTree = "<group>"; };
 		63DD222A1E3A6D23005EB82C /* libadpcmdec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libadpcmdec.a; sourceTree = "<group>"; };
 		63DD222B1E3A6D23005EB82C /* libamrdec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libamrdec.a; sourceTree = "<group>"; };
@@ -97,7 +106,6 @@
 		63DD22411E3A6D23005EB82C /* libsvacdec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libsvacdec.a; sourceTree = "<group>"; };
 		63DD22421E3A6D23005EB82C /* libTinyXML.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTinyXML.a; sourceTree = "<group>"; };
 		63DD22431E3A6D23005EB82C /* libTouProxy.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTouProxy.a; sourceTree = "<group>"; };
-		63DD22441E3A6D23005EB82C /* play.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = play.h; sourceTree = "<group>"; };
 		63DD22451E3A6D23005EB82C /* netsdk-objcpp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "netsdk-objcpp.h"; sourceTree = "<group>"; };
 		63DD22461E3A6D23005EB82C /* netsdk-objcpp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "netsdk-objcpp.mm"; sourceTree = "<group>"; };
 		63DD22CC1E3A8120005EB82C /* String+Exts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Exts.swift"; sourceTree = "<group>"; };
@@ -149,6 +157,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		636113661E3B5B7200F357F0 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				636113671E3B5B7200F357F0 /* avglobal.h */,
+				636113691E3B5B7200F357F0 /* Eng_configsdk.h */,
+				6361136A1E3B5B7200F357F0 /* Eng_netsdk.h */,
+				6361136B1E3B5B7200F357F0 /* play.h */,
+				6361136D1E3B5B7200F357F0 /* ProxyClientCWrap.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
 		63DD21FF1E3A6CF0005EB82C = {
 			isa = PBXGroup;
 			children = (
@@ -170,13 +190,16 @@
 		63DD220B1E3A6CF0005EB82C /* SwiftDahuaSDK */ = {
 			isa = PBXGroup;
 			children = (
-				63DD22CC1E3A8120005EB82C /* String+Exts.swift */,
-				63DD22231E3A6D23005EB82C /* dahua-defs.h */,
 				63DD22241E3A6D23005EB82C /* DahuaClient.swift */,
-				63DD22251E3A6D23005EB82C /* lib */,
+				63DD22CC1E3A8120005EB82C /* String+Exts.swift */,
 				63DD22451E3A6D23005EB82C /* netsdk-objcpp.h */,
 				63DD22461E3A6D23005EB82C /* netsdk-objcpp.mm */,
+				63DD22231E3A6D23005EB82C /* dahua-defs.h */,
+				636113751E3B891900F357F0 /* dahua-p2p-defs.h */,
+				636113761E3B891900F357F0 /* dahua-play-defs.h */,
 				63DD220C1E3A6CF0005EB82C /* SwiftDahuaSDK.h */,
+				636113661E3B5B7200F357F0 /* include */,
+				63DD22251E3A6D23005EB82C /* lib */,
 				63DD220D1E3A6CF0005EB82C /* Info.plist */,
 			);
 			path = SwiftDahuaSDK;
@@ -194,9 +217,6 @@
 		63DD22251E3A6D23005EB82C /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				63DD22261E3A6D23005EB82C /* avglobal.h */,
-				63DD22271E3A6D23005EB82C /* Eng_configsdk.h */,
-				63DD22281E3A6D23005EB82C /* Eng_netsdk.h */,
 				63DD22291E3A6D23005EB82C /* libaacdec.a */,
 				63DD222A1E3A6D23005EB82C /* libadpcmdec.a */,
 				63DD222B1E3A6D23005EB82C /* libamrdec.a */,
@@ -224,7 +244,7 @@
 				63DD22411E3A6D23005EB82C /* libsvacdec.a */,
 				63DD22421E3A6D23005EB82C /* libTinyXML.a */,
 				63DD22431E3A6D23005EB82C /* libTouProxy.a */,
-				63DD22441E3A6D23005EB82C /* play.h */,
+				6361137B1E3B94DE00F357F0 /* _COPY_DAHUA_STATIC_LIBRARY_FILES_HERE */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -236,13 +256,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63DD22671E3A6D24005EB82C /* play.h in Headers */,
+				636113781E3B891900F357F0 /* dahua-play-defs.h in Headers */,
+				636113771E3B891900F357F0 /* dahua-p2p-defs.h in Headers */,
+				6361136E1E3B5B7200F357F0 /* avglobal.h in Headers */,
+				636113721E3B5B7200F357F0 /* play.h in Headers */,
+				636113701E3B5B7200F357F0 /* Eng_configsdk.h in Headers */,
 				63DD22471E3A6D23005EB82C /* dahua-defs.h in Headers */,
+				636113711E3B5B7200F357F0 /* Eng_netsdk.h in Headers */,
 				63DD22681E3A6D24005EB82C /* netsdk-objcpp.h in Headers */,
+				636113741E3B5B7200F357F0 /* ProxyClientCWrap.h in Headers */,
 				63DD221A1E3A6CF0005EB82C /* SwiftDahuaSDK.h in Headers */,
-				63DD224A1E3A6D23005EB82C /* Eng_configsdk.h in Headers */,
-				63DD224B1E3A6D23005EB82C /* Eng_netsdk.h in Headers */,
-				63DD22491E3A6D23005EB82C /* avglobal.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +354,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6361137C1E3B94DE00F357F0 /* _COPY_DAHUA_STATIC_LIBRARY_FILES_HERE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,6 +594,7 @@
 				63DD221F1E3A6CF0005EB82C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63DD22201E3A6CF0005EB82C /* Build configuration list for PBXNativeTarget "SwiftDahuaSDKTests" */ = {
 			isa = XCConfigurationList;
@@ -578,6 +603,7 @@
 				63DD22221E3A6CF0005EB82C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
