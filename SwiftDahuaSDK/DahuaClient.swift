@@ -58,12 +58,3 @@ public class DahuaClient {
 }
 
 
-
-extension String {
-    
-    func toCString() -> UnsafeMutablePointer<Int8> {
-        let cs = (self as NSString).utf8String
-        return UnsafeMutablePointer<Int8>(mutating: cs!)
-    }
-    
-}
