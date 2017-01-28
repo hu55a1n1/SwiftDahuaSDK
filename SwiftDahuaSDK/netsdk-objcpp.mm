@@ -10,8 +10,9 @@
 #import "netsdk-objcpp.h"
 #import "include/Eng_netsdk.h"
 #import "include/ProxyClientCWrap.h"
+#import "include/play.h"
 
-// Mark: Client API
+#pragma mark - Client API
 BOOL CALL_METHOD CLIENT_Init_(fDisConnect cbDisConnect, LDWORD dwUser) {
     return CLIENT_Init(cbDisConnect, dwUser);
 }
@@ -36,8 +37,22 @@ BOOL CALL_METHOD CLIENT_GetDevConfig_(LLONG lLoginID, DWORD dwCommand, LONG lCha
     return CLIENT_GetDevConfig(lLoginID, dwCommand, lChannel, lpOutBuffer, dwOutBufferSize, lpBytesReturned, waittime);
 }
 
+#pragma mark Client Realplay API
+LLONG CALL_METHOD CLIENT_RealPlayEx_(LLONG lLoginID, int nChannelID, HWND hWnd, DH_RealPlayType rType = DH_RType_Realplay) {
+    return CLIENT_RealPlayEx(lLoginID, nChannelID, hWnd, rType);
+}
 
-// Mark: P2P API
+BOOL CALL_METHOD CLIENT_StopRealPlay_(LLONG lRealHandle) {
+    return CLIENT_StopRealPlay(lRealHandle);
+}
+
+BOOL CALL_METHOD CLIENT_SetRealDataCallBack_(LLONG lRealHandle, fRealDataCallBack cbRealData, LDWORD dwUser) {
+    return CLIENT_SetRealDataCallBack(lRealHandle, cbRealData, dwUser);
+}
+
+
+
+#pragma mark - P2P API
 TOU_API ProxyClientHandler DHProxyClientInit_(const char* svrip, int svrport, const char* passwd) {
     return DHProxyClientInit(svrip, svrport, passwd);
 }
@@ -87,3 +102,44 @@ TOU_API	int DHProxySetOption_(ProxyClientHandler handler, DHProxyOption option, 
 TOU_API int DHProxyGetOption_(ProxyClientHandler handler, DHProxyOption option) {
     return DHProxyGetOption(handler, option);
 }
+
+
+
+#pragma mark - Play API
+PLAYSDK_API BOOL CALLMETHOD PLAY_OpenStream_(LONG nPort,PBYTE pFileHeadBuf,DWORD nSize,DWORD nBufPoolSize) {
+    return PLAY_OpenStream(nPort, pFileHeadBuf, nSize, nBufPoolSize);
+}
+
+PLAYSDK_API BOOL CALLMETHOD PLAY_CloseStream_(LONG nPort) {
+    return PLAY_CloseStream(nPort);
+}
+
+PLAYSDK_API BOOL CALLMETHOD PLAY_Play_(LONG nPort, HWND hWnd) {
+    return PLAY_Play(nPort, hWnd);
+}
+
+PLAYSDK_API BOOL CALLMETHOD PLAY_Stop_(LONG nPort) {
+    return PLAY_Stop(nPort);
+}
+
+PLAYSDK_API BOOL CALLMETHOD PLAY_InputData_(LONG nPort,PBYTE pBuf,DWORD nSize) {
+    return PLAY_InputData(nPort, pBuf, nSize);
+}
+
+PLAYSDK_API BOOL CALLMETHOD PLAY_PlaySoundShare_(LONG nPort) {
+    return PLAY_PlaySoundShare(nPort);
+}
+
+PLAYSDK_API BOOL CALLMETHOD PLAY_StopSoundShare_(LONG nPort) {
+    return PLAY_StopSoundShare(nPort);
+}
+
+PLAYSDK_API BOOL CALLMETHOD PLAY_StopSound_() {
+    return PLAY_StopSound();
+}
+
+PLAYSDK_API BOOL CALLMETHOD PLAY_GetFreePort_(LONG *plPort) {
+    return PLAY_GetFreePort(plPort);
+}
+
+

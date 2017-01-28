@@ -17,7 +17,7 @@
 extern "C" {
 #endif
 
-// Mark: Client API
+#pragma mark - Client API
 BOOL CALL_METHOD CLIENT_Init_(fDisConnect cbDisConnect, LDWORD dwUser);
 
 void CALL_METHOD CLIENT_Cleanup_();
@@ -26,13 +26,20 @@ LLONG CALL_METHOD CLIENT_Login_(char *pchDVRIP, WORD wDVRPort, char *pchUserName
 
 LLONG CALL_METHOD CLIENT_LoginEx_(char *pchDVRIP, WORD wDVRPort, char *pchUserName, char *pchPassword, int nSpecCap, void* pCapParam, LPNET_DEVICEINFO lpDeviceInfo, int *error);
     
-// Log out the device
 BOOL CALL_METHOD CLIENT_Logout_(LLONG lLoginID);
 
 BOOL CALL_METHOD CLIENT_GetDevConfig_(LLONG lLoginID, DWORD dwCommand, LONG lChannel, LPVOID lpOutBuffer, DWORD dwOutBufferSize, LPDWORD lpBytesReturned,int waittime);
 
+#pragma mark Client Realplay API
+LLONG CALL_METHOD CLIENT_RealPlayEx_(LLONG lLoginID, int nChannelID, HWND hWnd, DH_RealPlayType rType);
 
-// Mark: P2P API
+BOOL CALL_METHOD CLIENT_StopRealPlay_(LLONG lRealHandle);
+
+BOOL CALL_METHOD CLIENT_SetRealDataCallBack_(LLONG lRealHandle, fRealDataCallBack cbRealData, LDWORD dwUser);
+    
+
+    
+#pragma mark - P2P API
 TOU_API ProxyClientHandler DHProxyClientInit_(const char* svrip, int svrport, const char* passwd);
     
 TOU_API void DHProxyClientRelease_(ProxyClientHandler handler);
@@ -61,6 +68,27 @@ TOU_API	int DHProxySetOption_(ProxyClientHandler handler, DHProxyOption option, 
 TOU_API int DHProxyGetOption_(ProxyClientHandler handler, DHProxyOption option);
     
 
+    
+#pragma mark - Play API
+PLAYSDK_API BOOL CALLMETHOD PLAY_OpenStream_(LONG nPort,PBYTE pFileHeadBuf,DWORD nSize,DWORD nBufPoolSize);
+    
+PLAYSDK_API BOOL CALLMETHOD PLAY_CloseStream_(LONG nPort);
+
+PLAYSDK_API BOOL CALLMETHOD PLAY_Play_(LONG nPort, HWND hWnd);
+    
+PLAYSDK_API BOOL CALLMETHOD PLAY_Stop_(LONG nPort);
+
+PLAYSDK_API BOOL CALLMETHOD PLAY_InputData_(LONG nPort,PBYTE pBuf,DWORD nSize);
+
+PLAYSDK_API BOOL CALLMETHOD PLAY_PlaySoundShare_(LONG nPort);
+
+PLAYSDK_API BOOL CALLMETHOD PLAY_StopSoundShare_(LONG nPort);
+
+PLAYSDK_API BOOL CALLMETHOD PLAY_StopSound_();
+
+PLAYSDK_API BOOL CALLMETHOD PLAY_GetFreePort_(LONG *plPort);
+    
+    
 #ifdef __cplusplus
 }
 #endif

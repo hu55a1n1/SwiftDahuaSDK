@@ -33,7 +33,7 @@ public class DahuaP2P {
     
     // Mark: public methods
     public func connect(deviceId: String, devicePort: Int, triesServerChk: Int = 5, triesDeviceChk: Int = 5, triesPortChk: Int = 5,
-                 cbClientOnline: (() -> Void)?, cbDeviceOnline: (() -> Void)?) -> (isSuccess: Bool, local_port: Int?) {
+                 cbClientOnline: (() -> Void)? = nil, cbDeviceOnline: (() -> Void)? = nil) -> (isSuccess: Bool, local_port: Int?) {
         if !isClientOnline(tries: 5) {
             return (false, nil)
         }

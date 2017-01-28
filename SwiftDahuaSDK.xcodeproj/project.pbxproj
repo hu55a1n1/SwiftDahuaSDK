@@ -51,6 +51,8 @@
 		63DD22681E3A6D24005EB82C /* netsdk-objcpp.h in Headers */ = {isa = PBXBuildFile; fileRef = 63DD22451E3A6D23005EB82C /* netsdk-objcpp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63DD22691E3A6D24005EB82C /* netsdk-objcpp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63DD22461E3A6D23005EB82C /* netsdk-objcpp.mm */; };
 		63DD22CD1E3A8120005EB82C /* String+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DD22CC1E3A8120005EB82C /* String+Exts.swift */; };
+		63E395441E3CA02200853189 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E395431E3CA02200853189 /* AudioToolbox.framework */; };
+		63E395481E3CC77E00853189 /* DahuaRealplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E395471E3CC77E00853189 /* DahuaRealplay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,8 @@
 		63DD22451E3A6D23005EB82C /* netsdk-objcpp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "netsdk-objcpp.h"; sourceTree = "<group>"; };
 		63DD22461E3A6D23005EB82C /* netsdk-objcpp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "netsdk-objcpp.mm"; sourceTree = "<group>"; };
 		63DD22CC1E3A8120005EB82C /* String+Exts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Exts.swift"; sourceTree = "<group>"; };
+		63E395431E3CA02200853189 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		63E395471E3CC77E00853189 /* DahuaRealplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DahuaRealplay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63E395441E3CA02200853189 /* AudioToolbox.framework in Frameworks */,
 				63DD22631E3A6D23005EB82C /* libStreamParser.a in Frameworks */,
 				63DD224F1E3A6D23005EB82C /* libconfigsdk.a in Frameworks */,
 				63DD22611E3A6D23005EB82C /* libpostprocess.a in Frameworks */,
@@ -177,6 +182,7 @@
 				63DD220B1E3A6CF0005EB82C /* SwiftDahuaSDK */,
 				63DD22161E3A6CF0005EB82C /* SwiftDahuaSDKTests */,
 				63DD220A1E3A6CF0005EB82C /* Products */,
+				63E395421E3CA02100853189 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -194,6 +200,7 @@
 			children = (
 				63DD22241E3A6D23005EB82C /* DahuaClient.swift */,
 				636113791E3B8D0000F357F0 /* DahuaP2P.swift */,
+				63E395471E3CC77E00853189 /* DahuaRealplay.swift */,
 				63DD22CC1E3A8120005EB82C /* String+Exts.swift */,
 				63DD22451E3A6D23005EB82C /* netsdk-objcpp.h */,
 				63DD22461E3A6D23005EB82C /* netsdk-objcpp.mm */,
@@ -250,6 +257,14 @@
 				6361137B1E3B94DE00F357F0 /* _COPY_DAHUA_STATIC_LIBRARY_FILES_HERE */,
 			);
 			path = lib;
+			sourceTree = "<group>";
+		};
+		63E395421E3CA02100853189 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63E395431E3CA02200853189 /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63DD22691E3A6D24005EB82C /* netsdk-objcpp.mm in Sources */,
+				63E395481E3CC77E00853189 /* DahuaRealplay.swift in Sources */,
 				63DD22481E3A6D23005EB82C /* DahuaClient.swift in Sources */,
 				6361137A1E3B8D0000F357F0 /* DahuaP2P.swift in Sources */,
 				63DD22CD1E3A8120005EB82C /* String+Exts.swift in Sources */,

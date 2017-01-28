@@ -11,7 +11,7 @@
 public class DahuaClient {
     
     // Mark: vars
-    var login_id: Int?
+    public var loginId: Int?
     
     
     // Mark: Enums
@@ -39,8 +39,8 @@ public class DahuaClient {
         var nError: Int32 = 0
         var devInfo = NET_DEVICEINFO()
 
-        login_id = CLIENT_LoginEx_(ip.unsafeMutablePointerInt8, UInt16(port), username.unsafeMutablePointerInt8, password.unsafeMutablePointerInt8, Int32(specCap.rawValue), nil, &devInfo, &nError)
-        if (login_id == 0) {
+        loginId = CLIENT_LoginEx_(ip.unsafeMutablePointerInt8, UInt16(port), username.unsafeMutablePointerInt8, password.unsafeMutablePointerInt8, Int32(specCap.rawValue), nil, &devInfo, &nError)
+        if (loginId == 0) {
             return (false, nil, Int(nError))
         }
         
@@ -49,10 +49,10 @@ public class DahuaClient {
     
     // Returns true even if not logged in
     public func logout() -> Bool {
-        guard (login_id != nil) else {
+        guard (loginId != nil) else {
             return true
         }
-        return CLIENT_Logout_(login_id!)
+        return CLIENT_Logout_(loginId!)
     }
     
 }
