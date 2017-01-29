@@ -6,7 +6,6 @@
 //  Copyright © 2017 Kindows Tech Solutions. All rights reserved.
 //
 
-//import Foundation
 
 public class DahuaClient {
     

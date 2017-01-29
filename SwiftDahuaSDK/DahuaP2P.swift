@@ -6,7 +6,6 @@
 //  Copyright © 2017 Shoaib Ahmed. All rights reserved.
 //
 
-//import Foundation
 
 public class DahuaP2P {
     
@@ -33,7 +32,7 @@ public class DahuaP2P {
     
     // Mark: public methods
     public func connect(deviceId: String, devicePort: Int, triesServerChk: Int = 5, triesDeviceChk: Int = 5, triesPortChk: Int = 5,
-                 cbClientOnline: (() -> Void)? = nil, cbDeviceOnline: (() -> Void)? = nil) -> (isSuccess: Bool, local_port: Int?) {
+                 cbClientOnline: (() -> Void)? = nil, cbDeviceOnline: (() -> Void)? = nil) -> (isSuccess: Bool, localPort: Int?) {
         if !isClientOnline(tries: 5) {
             return (false, nil)
         }
@@ -47,8 +46,8 @@ public class DahuaP2P {
         return addClientPort(deviceId: deviceId, devicePort: devicePort, tries: 5)
     }
     
-    public func disconnect(local_port: Int) -> Bool {
-        if (DHProxyClientDelPort_(client, Int32(local_port)) != 0) {
+    public func disconnect(localPort: Int) -> Bool {
+        if (DHProxyClientDelPort_(client, Int32(localPort)) != 0) {
             return false
         }
         return true
@@ -90,21 +89,21 @@ public class DahuaP2P {
         return isOnline
     }
     
-    func addClientPort(deviceId: String, devicePort: Int, tries: Int, tryInterval1: UInt32 = 1, tryInterval2: UInt32 = 5) -> (isSuccess: Bool, local_port: Int?) {
+    func addClientPort(deviceId: String, devicePort: Int, tries: Int, tryInterval1: UInt32 = 1, tryInterval2: UInt32 = 5) -> (isSuccess: Bool, localPort: Int?) {
         var isAcquiredLocalPort = false
-        var local_port: Int32 = 0
+        var localPort: Int32 = 0
         var _tries = tries
         
         while !isAcquiredLocalPort && (_tries != 0) {
             _tries -= 1
        
-            DHProxyClientAddPort_(client, deviceId.unsafeMutablePointerInt8, Int32(devicePort), &local_port)
+            DHProxyClientAddPort_(client, deviceId.unsafeMutablePointerInt8, Int32(devicePort), &localPort)
 
             while (_tries != 0) {
                 _tries -= 1
 
                 var cstate: DHProxyClientP2PChannelState = DHP2PChannelStateUnauthorized
-                if DHProxyClientChannelstate_(client, local_port, &cstate) < 0 {
+                if DHProxyClientChannelstate_(client, localPort, &cstate) < 0 {
                     break;
                 }
                 
@@ -119,7 +118,7 @@ public class DahuaP2P {
             sleep(tryInterval1)
         }
         
-        return (isAcquiredLocalPort, Int(local_port))
+        return (isAcquiredLocalPort, Int(localPort))
     }
     
 }
