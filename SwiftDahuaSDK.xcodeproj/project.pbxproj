@@ -16,6 +16,7 @@
 		636113781E3B891900F357F0 /* dahua-play-defs.h in Headers */ = {isa = PBXBuildFile; fileRef = 636113761E3B891900F357F0 /* dahua-play-defs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6361137A1E3B8D0000F357F0 /* DahuaP2P.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636113791E3B8D0000F357F0 /* DahuaP2P.swift */; };
 		6361137C1E3B94DE00F357F0 /* _COPY_DAHUA_STATIC_LIBRARY_FILES_HERE in Resources */ = {isa = PBXBuildFile; fileRef = 6361137B1E3B94DE00F357F0 /* _COPY_DAHUA_STATIC_LIBRARY_FILES_HERE */; };
+		63B3DF121E3E16BA003D85A2 /* DahuaVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B3DF111E3E16BA003D85A2 /* DahuaVideoView.swift */; };
 		63DD22131E3A6CF0005EB82C /* SwiftDahuaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD22091E3A6CF0005EB82C /* SwiftDahuaSDK.framework */; };
 		63DD22181E3A6CF0005EB82C /* SwiftDahuaSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DD22171E3A6CF0005EB82C /* SwiftDahuaSDKTests.swift */; };
 		63DD221A1E3A6CF0005EB82C /* SwiftDahuaSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 63DD220C1E3A6CF0005EB82C /* SwiftDahuaSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -75,6 +76,7 @@
 		636113761E3B891900F357F0 /* dahua-play-defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "dahua-play-defs.h"; sourceTree = "<group>"; };
 		636113791E3B8D0000F357F0 /* DahuaP2P.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DahuaP2P.swift; sourceTree = "<group>"; };
 		6361137B1E3B94DE00F357F0 /* _COPY_DAHUA_STATIC_LIBRARY_FILES_HERE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _COPY_DAHUA_STATIC_LIBRARY_FILES_HERE; sourceTree = "<group>"; };
+		63B3DF111E3E16BA003D85A2 /* DahuaVideoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DahuaVideoView.swift; sourceTree = "<group>"; };
 		63DD22091E3A6CF0005EB82C /* SwiftDahuaSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftDahuaSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63DD220C1E3A6CF0005EB82C /* SwiftDahuaSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftDahuaSDK.h; sourceTree = "<group>"; };
 		63DD220D1E3A6CF0005EB82C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 		63DD220B1E3A6CF0005EB82C /* SwiftDahuaSDK */ = {
 			isa = PBXGroup;
 			children = (
+				63B3DF111E3E16BA003D85A2 /* DahuaVideoView.swift */,
 				63DD22241E3A6D23005EB82C /* DahuaClient.swift */,
 				636113791E3B8D0000F357F0 /* DahuaP2P.swift */,
 				63E395471E3CC77E00853189 /* DahuaRealplay.swift */,
@@ -395,6 +398,7 @@
 				63DD22481E3A6D23005EB82C /* DahuaClient.swift in Sources */,
 				6361137A1E3B8D0000F357F0 /* DahuaP2P.swift in Sources */,
 				63DD22CD1E3A8120005EB82C /* String+Exts.swift in Sources */,
+				63B3DF121E3E16BA003D85A2 /* DahuaVideoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
