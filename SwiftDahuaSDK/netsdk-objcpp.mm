@@ -46,6 +46,10 @@ BOOL CALL_METHOD CLIENT_StopRealPlay_(LLONG lRealHandle) {
     return CLIENT_StopRealPlay(lRealHandle);
 }
 
+BOOL CALL_METHOD CLIENT_StopRealPlayEx_(LLONG lRealHandle) {
+    return CLIENT_StopRealPlayEx(lRealHandle);
+}
+
 BOOL CALL_METHOD CLIENT_SetRealDataCallBack_(LLONG lRealHandle, fRealDataCallBack cbRealData, LDWORD dwUser) {
     return CLIENT_SetRealDataCallBack(lRealHandle, cbRealData, dwUser);
 }
@@ -142,4 +146,6 @@ PLAYSDK_API BOOL CALLMETHOD PLAY_GetFreePort_(LONG *plPort) {
     return PLAY_GetFreePort(plPort);
 }
 
-
+PLAYSDK_API BOOL CALLMETHOD PLAY_ReleasePort_(LONG lPort) {
+    return PLAY_ReleasePort(lPort);
+}

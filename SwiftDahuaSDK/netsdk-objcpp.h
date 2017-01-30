@@ -35,6 +35,8 @@ LLONG CALL_METHOD CLIENT_RealPlayEx_(LLONG lLoginID, int nChannelID, HWND hWnd, 
 
 BOOL CALL_METHOD CLIENT_StopRealPlay_(LLONG lRealHandle);
 
+BOOL CALL_METHOD CLIENT_StopRealPlayEx_(LLONG lRealHandle);
+    
 BOOL CALL_METHOD CLIENT_SetRealDataCallBack_(LLONG lRealHandle, fRealDataCallBack cbRealData, LDWORD dwUser);
     
 
@@ -87,6 +89,8 @@ PLAYSDK_API BOOL CALLMETHOD PLAY_StopSoundShare_(LONG nPort);
 PLAYSDK_API BOOL CALLMETHOD PLAY_StopSound_();
 
 PLAYSDK_API BOOL CALLMETHOD PLAY_GetFreePort_(LONG *plPort);
+    
+PLAYSDK_API BOOL CALLMETHOD PLAY_ReleasePort_(LONG lPort);
     
     
 #ifdef __cplusplus

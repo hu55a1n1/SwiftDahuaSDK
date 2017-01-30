@@ -17,11 +17,6 @@ public class DahuaP2P {
         client = DHProxyClientInit_(serverIp.unsafeMutablePointerInt8, Int32(serverPort), serverSecret.unsafeMutablePointerInt8)
     }
     
-//    convenience public init(serverIp: String, serverPort: Int, serverSecret: String, deviceId: String, devicePort: Int, tryCount: Int) {
-//        self.init(serverIp: serverIp, serverPort: serverPort, serverSecret: serverSecret)
-//        
-//    }
-    
     deinit {
         guard (client != nil) else {
             return
