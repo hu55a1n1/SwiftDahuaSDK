@@ -7,11 +7,29 @@
 //
 
 
+public protocol DahuaRealplayDelegate {
+    
+    func didStartPlayback() -> Void
+    
+}
+
 public class DahuaRealplay {
     
     var port: Int32
     let handle: Int
     public var isPlaying: Bool = false
+    public var delegate: DahuaRealplayDelegate?
+    
+    enum Notification: String {
+        
+        case started = "Start"
+        
+        static func name(for notification: Notification, port: Int32) -> SwiftDahuaSDK.Notification.Name {
+            return SwiftDahuaSDK.Notification.Name(rawValue: "DahuaRealplayNotification\(notification.rawValue)_\(port)")
+        }
+        
+    }
+    
     
     public init?(client: DahuaClient?, channel: Int, type: DH_RealPlayType = DH_RType_Realplay) {
         guard (client != nil) && (client!.loginId != nil) else {
@@ -30,9 +48,13 @@ public class DahuaRealplay {
         }
         
         port = _port
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.notificationReceived), name: Notification.name(for: .started, port: port), object: nil)
     }
     
     deinit {
+        NotificationCenter.default.removeObserver(self, name: Notification.name(for: .started, port: port), object: nil);
+
         if isPlaying {
             stop()
         }
@@ -56,12 +78,13 @@ public class DahuaRealplay {
             return false
         }
         
-        CLIENT_SetRealDataCallBack_(handle, { (lRealHandle, dwDataType, pBuffer, dwBufSize, port) -> Void in
-            PLAY_InputData_(Int32(port), pBuffer, dwBufSize)
+        CLIENT_SetRealDataCallBack_(handle, { (lRealHandle, dwDataType, pBuffer, dwBufSize, _port) -> Void in
+            let port = Int32(_port)
+            NotificationCenter.default.post(name: Notification.name(for: .started, port: port), object: nil)
+            PLAY_InputData_(port, pBuffer, dwBufSize)
             return
         }, Int(port))
         
-        isPlaying = true
         return true
     }
     
@@ -74,4 +97,13 @@ public class DahuaRealplay {
         return
     }
     
+    // Mark: Notification
+    @objc func notificationReceived() {
+        if isPlaying {
+            return
+        }
+        isPlaying = true
+        delegate?.didStartPlayback()
+    }
+
 }

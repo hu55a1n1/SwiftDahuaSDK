@@ -7,10 +7,18 @@
 //
 
 
+public protocol DahuaP2PDelegate {
+    
+    func clientFoundOnline() -> Void
+    func deviceFoundOnline() -> Void
+    
+}
+
 public class DahuaP2P {
     
     // Mark: vars
     let client: ProxyClientHandler?
+    public var delegate: DahuaP2PDelegate?
     
     
     required public init(serverIp: String, serverPort: Int, serverSecret: String) {
@@ -26,17 +34,16 @@ public class DahuaP2P {
     
     
     // Mark: public methods
-    public func connect(deviceId: String, devicePort: Int, triesServerChk: Int = 5, triesDeviceChk: Int = 5, triesPortChk: Int = 5,
-                 cbClientOnline: (() -> Void)? = nil, cbDeviceOnline: (() -> Void)? = nil) -> (isSuccess: Bool, localPort: Int?) {
+    public func connect(deviceId: String, devicePort: Int, triesServerChk: Int = 5, triesDeviceChk: Int = 5, triesPortChk: Int = 5) -> (isSuccess: Bool, localPort: Int?) {
         if !isClientOnline(tries: 5) {
             return (false, nil)
         }
-        cbClientOnline?()
+        delegate?.clientFoundOnline()
         
         if !isDeviceOnline(deviceId: deviceId, tries: 5) {
             return (false, nil)
         }
-        cbDeviceOnline?()
+        delegate?.deviceFoundOnline()
         
         return addClientPort(deviceId: deviceId, devicePort: devicePort, tries: 5)
     }
