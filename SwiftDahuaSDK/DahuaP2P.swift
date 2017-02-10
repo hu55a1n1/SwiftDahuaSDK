@@ -34,18 +34,18 @@ public class DahuaP2P {
     
     
     // Mark: public methods
-    public func connect(deviceId: String, devicePort: Int, triesServerChk: Int = 5, triesDeviceChk: Int = 5, triesPortChk: Int = 5) -> (isSuccess: Bool, localPort: Int?) {
-        if !isClientOnline(tries: 5) {
+    public func connect(deviceId: String, devicePort: Int, triesServerChk: Int = 500, triesDeviceChk: Int = 500, triesPortChk: Int = 500, every usecInterval: UInt32 = 100000) -> (isSuccess: Bool, localPort: Int?) {
+        if !isClientOnline(tries: triesServerChk, every: usecInterval) {
             return (false, nil)
         }
         delegate?.clientFoundOnline()
         
-        if !isDeviceOnline(deviceId: deviceId, tries: 5) {
+        if !isDeviceOnline(deviceId: deviceId, tries: triesDeviceChk, every: usecInterval) {
             return (false, nil)
         }
         delegate?.deviceFoundOnline()
         
-        return addClientPort(deviceId: deviceId, devicePort: devicePort, tries: 5)
+        return addClientPort(deviceId: deviceId, devicePort: devicePort, tries: triesPortChk, every: usecInterval)
     }
     
     public func disconnect(localPort: Int) -> Bool {
@@ -57,7 +57,7 @@ public class DahuaP2P {
     
     
     // Mark: private methods
-    func isClientOnline(tries: Int, tryInterval: UInt32 = 1) -> Bool
+    func isClientOnline(tries: Int, every usecInterval: UInt32 = 100000) -> Bool
     {
         var state: DHProxyClientProxyState = DHProxyStateUnauthorized
         var isOnline = false
@@ -69,12 +69,12 @@ public class DahuaP2P {
                     break
                 }
             }
-            sleep(tryInterval)
+            usleep(usecInterval)
         }
         return isOnline
     }
     
-    func isDeviceOnline(deviceId: String, tries: Int, tryInterval: UInt32 = 1) -> Bool
+    func isDeviceOnline(deviceId: String, tries: Int, every usecInterval: UInt32 = 100000) -> Bool
     {
         var state: DHProxyClientProxyState = DHProxyStateUnauthorized
         var isOnline = false
@@ -86,12 +86,12 @@ public class DahuaP2P {
                     break
                 }
             }
-            sleep(tryInterval)
+            usleep(usecInterval)
         }
         return isOnline
     }
     
-    func addClientPort(deviceId: String, devicePort: Int, tries: Int, tryInterval1: UInt32 = 1, tryInterval2: UInt32 = 5) -> (isSuccess: Bool, localPort: Int?) {
+    func addClientPort(deviceId: String, devicePort: Int, tries: Int, every usecInterval: UInt32 = 100000) -> (isSuccess: Bool, localPort: Int?) {
         var isAcquiredLocalPort = false
         var localPort: Int32 = 0
         var _tries = tries
@@ -100,7 +100,8 @@ public class DahuaP2P {
             _tries -= 1
        
             DHProxyClientAddPort_(client, deviceId.unsafeMutablePointerInt8, Int32(devicePort), &localPort)
-
+            usleep(usecInterval)
+            
             while (_tries != 0) {
                 _tries -= 1
 
@@ -114,10 +115,8 @@ public class DahuaP2P {
                     break;
                 }
                 
-                sleep(tryInterval2)
+                usleep(usecInterval)
             }
-            
-            sleep(tryInterval1)
         }
         
         return (isAcquiredLocalPort, Int(localPort))
