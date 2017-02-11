@@ -71,12 +71,6 @@ public class DahuaRealplay {
             PLAY_CloseStream_(port)
             return false
         }
-
-        guard PLAY_PlaySoundShare_(port) else {
-            PLAY_CloseStream_(port)
-            PLAY_Stop_(port)
-            return false
-        }
         
         CLIENT_SetRealDataCallBack_(handle, { (lRealHandle, dwDataType, pBuffer, dwBufSize, _port) -> Void in
             let port = Int32(_port)
@@ -89,12 +83,19 @@ public class DahuaRealplay {
     }
     
     public func stop() -> Void {
-        PLAY_StopSoundShare_(port)
         PLAY_Stop_(port)
         PLAY_CloseStream_(port)
         
         isPlaying = false
         return
+    }
+    
+    public func soundON() -> Bool {
+        return PLAY_PlaySoundShare_(port)
+    }
+    
+    public func soundOFF() -> Bool {
+        return PLAY_StopSoundShare_(port)
     }
     
     // Mark: Notification
