@@ -55,6 +55,10 @@ public class DahuaClient {
     }
     
     public func getChannelConfig(for channel: Int, waittime: Int = 1000) -> DHDEV_CHANNEL_CFG? {
+        guard (loginId != nil) else {
+            return nil
+        }
+        
         var chInfo = DHDEV_CHANNEL_CFG()
         var bytesReturned: UInt32 = 0
         
@@ -69,6 +73,21 @@ public class DahuaClient {
         }
         
         return chInfo
+    }
+    
+    public func getDiskState(waittime: Int = 1000) -> DH_HARDDISK_STATE? {
+        guard (loginId != nil) else {
+            return nil
+        }
+        
+        var diskState = DH_HARDDISK_STATE()
+        var bytesReturned: Int32 = 0
+        
+        guard CLIENT_QueryDevState_(loginId!, DH_DEVSTATE_DISK, UnsafeMutablePointer<Int8>(OpaquePointer(UnsafeMutableRawPointer(&diskState))), Int32(MemoryLayout<DH_HARDDISK_STATE>.size), &bytesReturned, Int32(waittime)) else {
+            return nil
+        }
+        
+        return diskState
     }
     
 }

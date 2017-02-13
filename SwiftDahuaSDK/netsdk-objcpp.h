@@ -29,7 +29,9 @@ LLONG CALL_METHOD CLIENT_LoginEx_(char *pchDVRIP, WORD wDVRPort, char *pchUserNa
 BOOL CALL_METHOD CLIENT_Logout_(LLONG lLoginID);
 
 BOOL CALL_METHOD CLIENT_GetDevConfig_(LLONG lLoginID, DWORD dwCommand, LONG lChannel, LPVOID lpOutBuffer, DWORD dwOutBufferSize, LPDWORD lpBytesReturned,int waittime);
-
+    
+BOOL CALL_METHOD CLIENT_QueryDevState_(LLONG lLoginID, int nType, char *pBuf, int nBufLen, int *pRetLen, int waittime);
+    
 #pragma mark Client Realplay API
 LLONG CALL_METHOD CLIENT_RealPlayEx_(LLONG lLoginID, int nChannelID, HWND hWnd, DH_RealPlayType rType);
 

@@ -37,6 +37,10 @@ BOOL CALL_METHOD CLIENT_GetDevConfig_(LLONG lLoginID, DWORD dwCommand, LONG lCha
     return CLIENT_GetDevConfig(lLoginID, dwCommand, lChannel, lpOutBuffer, dwOutBufferSize, lpBytesReturned, waittime);
 }
 
+BOOL CALL_METHOD CLIENT_QueryDevState_(LLONG lLoginID, int nType, char *pBuf, int nBufLen, int *pRetLen, int waittime=1000) {
+    return CLIENT_QueryDevState(lLoginID, nType, pBuf, nBufLen, pRetLen, waittime);
+}
+
 #pragma mark Client Realplay API
 LLONG CALL_METHOD CLIENT_RealPlayEx_(LLONG lLoginID, int nChannelID, HWND hWnd, DH_RealPlayType rType = DH_RType_Realplay) {
     return CLIENT_RealPlayEx(lLoginID, nChannelID, hWnd, rType);
